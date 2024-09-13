@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	int on=n;
+	int ont=n;
+	int c=0;
+	while(n>0){
+		n=n/10;
+		c++;
+	}
+	int add=0;
+	while(on>0){
+		int v=on%10;
+		int value=pow(v,c);
+		add+=value;
+		on=on/10;
+		
+	}
+	cout<<add<<endl;
+	if(add==ont){
+		cout<<"Arm";
+	}
+	else{
+		cout<<"Not Arm";
+	}
+	return 0;
+}
